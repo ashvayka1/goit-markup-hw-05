@@ -141,44 +141,18 @@ body {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.mail::before {
+.header-icon {
   display: inline-block;
-  content: '';
-  width: 16px;
-  height: 12px;
   margin-right: 10px;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-image: url(../images/envelope.svg);
 
-  transition-property: fill;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.mail:hover::before,
-.mail:focus::before {
+.mail:hover,
+.mail:focus,
+.tel:hover,
+.tel:focus {
+  outline: none;
   fill: var(--accent-color);
-}
-.tel::before {
-  display: inline-block;
-  content: '';
-  width: 10px;
-  height: 16px;
-  margin-right: 10px;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-image: url(../images/smartphone.svg);
-
-  transition-property: fill;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-.tel:hover::before,
-.tel:focus::before {
-  fill: var(--accent-color);
-}
-.addres-list a:hover,
-.addres-list a:focus {
   color: var(--accent-color);
 }
 
@@ -701,6 +675,7 @@ body {
   padding: 6px;
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
+  outline: none;
   background-color: var(--white-color);
   cursor: pointer;
 }
